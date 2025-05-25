@@ -31,3 +31,23 @@ total = 0
 for digit in x:
     total += int(digit)
 print(f"Сумма чисел: {total}")
+
+#ДЗ 24.05.2025
+#Задача 11
+letters = 'ЫгВЫоЯСремДШНККАыкЩЙФа'
+for letter in letters:
+    if letter.upper() == letters:
+        letters.replace(letter, '')
+        print(letters)
+
+# Здача 12
+secret_nicknames = ["Мавпродош", "Лорнектиф", "Древерол", "Фиригарпиг", 'Клодобродыч']
+password = "123456"
+
+while True:
+    username = input("Введите свой никнейм: ")
+    if username in secret_nicknames:
+        print("Ты – свой. Приветствую, любезный ", username + "! Пароль:", password)
+        break
+    else:
+        print("Тут ничего нет. Еще есть вопросы?")
