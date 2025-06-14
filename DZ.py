@@ -132,70 +132,47 @@ from unicodedata import normalize
 # print("Количество одинаковых вхождений слова:", normalize_words.count(search_word))
 
 #07.06.2025
-# user_name = input("Введите имя: ")
-# string = input("Введите строку: ")
-# count = 0
-# for letter in user_name:
-#     count += string.count(letter)
-# if count > 0:
-#     print(f"Количество букв вашего имени в строке: {count}")
-# else:
-#     print("Букв вашего имени нет в строке")
+user_name = input("Введите имя: ")
+string = input("Введите строку: ")
+count = 0
+for letter in user_name:
+    count += string.count(letter)
+if count > 0:
+    print(f"Количество букв вашего имени в строке: {count}")
+else:
+    print("Букв вашего имени нет в строке")
 
-# #08.06.2025
-# #Задача 4. Напишите функцию, которая вычисляет среднее арифметическое пяти целых чисел.
-# numbers = [4, 9, 7, 5, 2]
-# average = sum(numbers) / len(numbers)
-# print(average)
-#
-#
-# #Задача 7. Найти периметр треугольника, заданного координатами своих вершин.  (Определить функцию
-# # для расчета длины отрезка по координатам его вершин.)
-# a = 0
-# b = []
-# triangle = {
-# 'v1': [input('Write the coordinates for the first vector: ') for x in range(2)],
-# 'v2': [input('Write the coordinates for the second vector: ') for x in range(2)],
-# 'v3': [input('Write the coordinates for the third vector: ') for x in range(2)]
-# }
-# for z, y in triangle.items():
-#     for x in y:
-#         a = int(x)**2 + a
-#     b.append(a**(1/2))
-#     a = 0
-# print(sum(b))
-#
-# #2-й способ
-# import math
-# def distance2D(xA,yA,xB,yB):
-#     return math.sqrt((xA-xB)*(xA-xB)+(yA-yB)*(yA-yB))
-#
-# def trianglePerimeter(xA,yA,xB,yB,xC,yC):
-#     return distance2D(xA,yA,xB,yB)+distance2D(xA,yA,xC,yC)+distance2D(xC,yC,xB,yB)
-#
-# print(trianglePerimeter(3,8,6,2,7,6))
-#
-# #Задача 5. Напишите функцию, которая находит количество цифр в десятичной записи числа.
-# def count_digits(number):
-#     number = abs(number)
-#     count = 0
-#     while number > 0:
-#         count += 1
-#         number //= 10
-#     return count if count > 0 else 1
-#
-# num = int(input("Введите число: "))
-# print("Количество десятичных цифр:", count_digits(num))
+#08.06.2025
+#Задача 4. Напишите функцию, которая вычисляет среднее арифметическое пяти целых чисел.
+numbers = [4, 9, 7, 5, 2]
+average = sum(numbers) / len(numbers)
+print(average)
 
-# def calculate_perimeter(side1, side2, side3):
-#     perimeter = side1 + side2 + side3
-#     return perimeter
-#     side1 = float(input("Введите длину первой стороны: "))
-#     side2 = float(input("Введите длину второй стороны: "))
-#     side3 = float(input("Введите длину третьей стороны: "))
-#     perimeter = calculate_perimeter(side1, side2, side3)
-#     print("Периметр треугольника равен:", perimeter)
-#     perimeter = calculate_perimeter(2, 4, 3, 2, 2, 4)
+
+#Задача 7. Найти периметр треугольника, заданного координатами своих вершин.  (Определить функцию
+# для расчета длины отрезка по координатам его вершин.)
+def calculate_perimeter(side1, side2, side3):
+    perimeter = side1 + side2 + side3
+    return perimeter
+side1 = float(input("Введите длину первой стороны: "))
+side2 = float(input("Введите длину второй стороны: "))
+side3 = float(input("Введите длину третьей стороны: "))
+perimeter = calculate_perimeter(side1, side2, side3)
+print("Периметр треугольника равен:", perimeter)
+
+#Задача 5. Напишите функцию, которая находит количество цифр в десятичной записи числа.
+def count_digits(number):
+     number = abs(number)
+     count = 0
+     while number > 0:
+         count += 1
+         number //= 10
+     return count if count > 0 else 1
+
+num = int(input("Введите число: "))
+print("Количество десятичных цифр:", count_digits(num))
+
+
 
 
 
