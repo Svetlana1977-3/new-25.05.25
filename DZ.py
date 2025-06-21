@@ -132,61 +132,137 @@ from unicodedata import normalize
 # print("Количество одинаковых вхождений слова:", normalize_words.count(search_word))
 
 #07.06.2025
-user_name = input("Введите имя: ")
-string = input("Введите строку: ")
-count = 0
-for letter in user_name:
-    count += string.count(letter)
-if count > 0:
-    print(f"Количество букв вашего имени в строке: {count}")
-else:
-    print("Букв вашего имени нет в строке")
+# user_name = input("Введите имя: ")
+# string = input("Введите строку: ")
+# count = 0
+# for letter in user_name:
+#     count += string.count(letter)
+# if count > 0:
+#     print(f"Количество букв вашего имени в строке: {count}")
+# else:
+#     print("Букв вашего имени нет в строке")
+#
+# #08.06.2025
+# #Задача 4. Напишите функцию, которая вычисляет среднее арифметическое пяти целых чисел.
+# numbers = [4, 9, 7, 5, 2]
+# average = sum(numbers) / len(numbers)
+# print(average)
+#
+#
+# #Задача 7. Найти периметр треугольника, заданного координатами своих вершин.  (Определить функцию
+# # для расчета длины отрезка по координатам его вершин.)
+# def calculate_perimeter(side1, side2, side3):
+#     perimeter = side1 + side2 + side3
+#     return perimeter
+# side1 = float(input("Введите длину первой стороны: "))
+# side2 = float(input("Введите длину второй стороны: "))
+# side3 = float(input("Введите длину третьей стороны: "))
+# perimeter = calculate_perimeter(side1, side2, side3)
+# print("Периметр треугольника равен:", perimeter)
+#
+# #Задача 5. Напишите функцию, которая находит количество цифр в десятичной записи числа.
+# def count_digits(number):
+#      number = abs(number)
+#      count = 0
+#      while number > 0:
+#          count += 1
+#          number //= 10
+#      return count if count > 0 else 1
+#
+# num = int(input("Введите число: "))
+# print("Количество десятичных цифр:", count_digits(num))
 
-#08.06.2025
-#Задача 4. Напишите функцию, которая вычисляет среднее арифметическое пяти целых чисел.
-numbers = [4, 9, 7, 5, 2]
-average = sum(numbers) / len(numbers)
-print(average)
+# #Задача 7 второй вариант
+# def distas(x1, y1, x2, y2):
+#     return (((x2 - x1)**2) + ((y2 - y1)**2))**0.5
+# def triangle_perimetr(x1, y1, x2, y2, x3, y3):
+#   a = distas(x1, y1, x2, y2)
+#   b = distas(x2, y2, x3, y3)
+#   c = distas(x3, y3, x1, y1)
+#   return a + b + c
+#
+# print(triangle_perimetr(x1: 1, y1: 2, x2: 4, y2: 5, x3: 6, y3: 7))
+
+#14.06.2025
+#Задача 11 Поменять местами значения
+# a = int(input('a: '))
+# b = int(input('b: '))
+# c = int(input('c: '))
+# d = int(input('d: '))
+#
+# a = a + b
+# b = a - b
+# a = a - b
+# c = c + d
+# d = c - d
+# c = c - d
+# print('a =', a)
+# print('b =', b)
+# print('c =', c)
+# print('d =', d)
+#
+# # Задача 12 Даны стороны двух треугольников. Найти сумму их периметров и площадей
+# def per(a, b, c):
+#     return a + b + c
+# def area(a, b, c):
+#     p = per(a, b, c) / 2
+#     return (p * (p - a) * (p - b) * (p - c)) ** 0.5
+# print (per(3, 4, 5))
+# print(area(3, 4, 5))
+
+#15.06.2025
+#Задача 20. Найти периметр и площадь треугольника и определить где находиться вхождение точки
+
+# def side_length(x1, y1, x2, y2):
+#     return ((x2 - x1)**2 + (y2 - y1)**2)**0.5
+#
+# def heron_triangle_area(a, b, c):
+#     p = (a + b + c) / 2
+#     return (p *(p - a) * (p - b) * (p - c))**0.5
+#
+# def pointInTriangle(x1, y1, x2, y2, x3, y3):
+#     a = side_length(x1, y1, x2, y2)
+#     b = side_length(x2, y2, x3, y3)
+#     c = side_length(x3, y3, x1, y1)
+#     area_abc = heron_triangle_area(a, b, c)
+#
+#     a1 = side_length(px, py, x1, y1)
+#     b1 = side_length(px, py, x2, y2)
+#     c1 = side_length(x1, y1, x2, y2)
+#     area_pab = heron_triangle_area(a1, b1,c1)
+#
+#     a2 = side_length(px, py, x2, y2)
+#     b2 = side_length(px, py, x3, y3)
+#     c2 = side_length(x2, y2, x3, y3)
+#     area_pbc = heron_triangle_area(a2, b2, c2)
+#
+#     a3 = side_length(px, py, x1, y1)
+#     b3 = side_length(px, py, x1, y1)
+#     c3 = side_length(x3, y3, x1, y1)
+#     area_pca = heron_triangle_area(a3, b3, c3)
+#     total_area = area_pab + area_pbc + area_pca
+#     return area_abc == total_area
+# print(pointInTriangle(1, 1, 0, 0, 4, 4,))
 
 
-#Задача 7. Найти периметр треугольника, заданного координатами своих вершин.  (Определить функцию
-# для расчета длины отрезка по координатам его вершин.)
-def calculate_perimeter(side1, side2, side3):
-    perimeter = side1 + side2 + side3
-    return perimeter
-side1 = float(input("Введите длину первой стороны: "))
-side2 = float(input("Введите длину второй стороны: "))
-side3 = float(input("Введите длину третьей стороны: "))
-perimeter = calculate_perimeter(side1, side2, side3)
-print("Периметр треугольника равен:", perimeter)
+#Задача 18. Найти средний балл для спортсменов
 
-#Задача 5. Напишите функцию, которая находит количество цифр в десятичной записи числа.
-def count_digits(number):
-     number = abs(number)
-     count = 0
-     while number > 0:
-         count += 1
-         number //= 10
-     return count if count > 0 else 1
+# m = sorted(map(int, input('Введите оценки экспертов через пробел').split()))
+# print(m[0], m[-1])
+# print(round(sum(m[1:4]) / 3, 2))
 
-num = int(input("Введите число: "))
-print("Количество десятичных цифр:", count_digits(num))
+#Задача 19. Найти периметр и площадь прямоугольника и вхождение точки
+# def pointInRect(x, y, x1, y1, x2, y2):
+#     return x1 <= x <= x2 and y2 <= y <= y1
+# x = int(input("Введите координаты х исходной точки: "))
+# y = int(input("Введите координаты y исходной точки: "))
+#
+# x1 = int(input("Введите координаты х нижней точки: "))
+# y1 = int(input("Введите координаты y верхней точки: "))
+# x2 = int(input("Введите координаты х нижнего угла: "))
+# y2 = int(input("Введите координаты y верхнего угла: "))
+# print(pointInRect(x, y, x1, y1, x2, y2))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#21.06.2025
 
 
