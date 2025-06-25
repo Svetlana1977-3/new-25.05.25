@@ -1,4 +1,6 @@
 #print("Svetlana")
+import sys
+
 from unicodedata import normalize
 
 #ДЗ 18.05.2025 Найдите число фибоначи (сумма чисел)
@@ -264,5 +266,51 @@ from unicodedata import normalize
 # print(pointInRect(x, y, x1, y1, x2, y2))
 
 #21.06.2025
+#Задача 1 Что вернется при вызове F(4)
+# class ParentClass:
+#     def __init__(self, name):
+#         self.name = name
+#         def greet(self):
+#             print(f"Привет, меня зовут {self.name}")
+# class ChildClass(ParentClass):
+#     def __init__(self, name, age):
+#         super().__init__(name)
+#         self.age = age
+#         def greet(self):
+#             super().greet()
+#             print(f"Я {self.age} мне лет")
+
+#Задача #2
+# class Rectangle:
+#     def __init__(self, width, height):
+#         self.width = width
+#         self.height = height
+#
+#     def get_square(self):
+#         return self.width * self.height
+#
+#     def __eq__(self, other):
+#         pass
+#     def __add__(self, other):
+#         pass
+#     def __mul__(self, n):
+#         pass
+#     def __str__(self):
+#         pass
+#
+#
+# r1 = Rectangle(2, 4)
+# r2 = Rectangle(3, 6)
+# print(r1.get_square())
+# print(r2.get_square())
+# r3 = r1 + r2
+# print(r3.get_square())
+# r4 = r1 * 4
+# print(r4.get_square())
+
+
+
+
+
 
 
