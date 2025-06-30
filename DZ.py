@@ -265,48 +265,65 @@ from unicodedata import normalize
 # y2 = int(input("Введите координаты y верхнего угла: "))
 # print(pointInRect(x, y, x1, y1, x2, y2))
 
-#21.06.2025
-#Задача 1 Что вернется при вызове F(4)
-# class ParentClass:
-#     def __init__(self, name):
+#21.06.2025 OOP Practic
+#Задача 2 Что вернется при вызове F(4)
+# class Person:More actions
+#     def __init__(self, name, age, gender):
 #         self.name = name
-#         def greet(self):
-#             print(f"Привет, меня зовут {self.name}")
-# class ChildClass(ParentClass):
-#     def __init__(self, name, age):
-#         super().__init__(name)
 #         self.age = age
-#         def greet(self):
-#             super().greet()
-#             print(f"Я {self.age} мне лет")
+#         self.gender = gender
+#
+#     def introduce(self):
+#         print(f"Имя: {self.name}, Возраст: {self.age}, Пол: {self.gender}")
+#
+# class Employee(Person):
+#     def __init__(self, name, age, gender, salary, position):
+#         super().__init__(name, age, gender)
+#         self.salary = salary
+#         self.position = position
+#
+#     def work(self):
+#         print(f"{self.name} работает в качестве {self.position} с ЗП {self.salary} рублей.")
+#
+#
+# person = Person("Алиса", 30, "женский")
+# person.introduce()
+#
+# employee = Employee("Алексей", 28, "мужской", "200 тыс.", "QA Senior")
+# employee.introduce()
+# employee.work()
 
-#Задача #2
+
+#Задача №1
 # class Rectangle:
 #     def __init__(self, width, height):
 #         self.width = width
 #         self.height = height
 #
-#     def get_square(self):
+#     def area(self):
 #         return self.width * self.height
+#     def perimetr(self):
+#         return 2 * (self.width + self.height)
+#     class Square(Rectangle):
 #
-#     def __eq__(self, other):
-#         pass
-#     def __add__(self, other):
-#         pass
-#     def __mul__(self, n):
-#         pass
-#     def __str__(self):
-#         pass
+# class Square(Rectangle):
+#     def __init__(self, side):
+#         super().__init__(side, side)
 #
+#     def area(self):
+#         return self.side ** 2
 #
-# r1 = Rectangle(2, 4)
-# r2 = Rectangle(3, 6)
-# print(r1.get_square())
-# print(r2.get_square())
-# r3 = r1 + r2
-# print(r3.get_square())
-# r4 = r1 * 4
-# print(r4.get_square())
+#     def perimetr(self):
+#         return 4 * self.side
+# rect = Rectangle(4, 5)
+# print("Площадь прямоугольника: ", rect.area())
+# print("Площадь прямоугольника: ", rect.perimetr())
+#
+# sq = Square(3)
+# print("Площадь квадрата: ", sq.area())
+# print("Площадь квадрата: ", sq.perimetr())
+
+
 
 
 
